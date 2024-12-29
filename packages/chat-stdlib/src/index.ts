@@ -72,7 +72,7 @@ export function stringifyError(
     err instanceof Error
       ? stringifyErrorValue(err)
       : err
-      ? '' + err
+      ? '' + String(err)
       : '(missing error information)'
   }`
 }
