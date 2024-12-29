@@ -1,0 +1,14 @@
+{
+  // import the rules from the root tsconfig
+  "extends": "../tsconfig.json",
+  "references": [{ "name": "chat-stdlib", "path": ".." }],
+  "compilerOptions": {
+    "types": ["jest"],
+    "rootDir": "..",
+    "baseUrl": ".",
+    "paths": {
+      "chat-stdlib": ["../src"]
+    }
+  },
+  "include": ["."]
+}
