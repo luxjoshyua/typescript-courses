@@ -7,7 +7,8 @@
     "rootDir": "..",
     "baseUrl": ".",
     "paths": {
-      "chat-stdlib": ["../src"]
+      // "chat-stdlib": ["../src"]
+      "chat-stdlib": ["../dist/chat-stdlib-beta.d.ts"]
     }
   },
   "include": ["."]
