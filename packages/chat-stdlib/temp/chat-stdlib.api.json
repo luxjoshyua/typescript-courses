@@ -338,7 +338,7 @@
             },
             {
               "kind": "Content",
-              "text": ", errorDescription?: "
+              "text": ", errorDescription: "
             },
             {
               "kind": "Content",
@@ -379,7 +379,7 @@
                 "startIndex": 3,
                 "endIndex": 4
               },
-              "isOptional": true
+              "isOptional": false
             }
           ],
           "name": "stringifyError"
