@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Mike's TypeScript Courses",
   "main": "index.js",
+  "types": "dist/chat-stdlib.d.ts",
   "repository": "git@github.com:mike-north/typescript-courses.git",
   "author": "Mike North <michael.l.north@gmail.com>",
   "license": "NOLICENSE",
