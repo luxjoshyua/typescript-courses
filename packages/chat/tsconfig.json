@@ -10,8 +10,10 @@
     "jsx": "react",
     "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
+    // "noImplicitAny": true,
     "baseUrl": ".",
     "rootDir": "."
+    // "typeRoots": ["./types"],
   },
   "include": [
     "src",
