@@ -1,18 +1,21 @@
 import * as React from 'react'
 import TeamLink from './TeamSelector/TeamLink'
+import { ITeam } from '../../types'
 
-const TeamSelector = ({ teams }) => (
-  <nav className="team-selector bg-indigo-900 border-indigo-900 border-r-2 pt-2 text-purple-300 flex-none block">
+const TeamSelector = ({ teams }:
+  // everything on iteam except for messages
+   {teams: Pick<ITeam, Exclude<keyof ITeam, 'messages'>>[]}) => (
+  <nav className="flex-none block pt-2 text-purple-300 bg-indigo-900 border-r-2 border-indigo-900 team-selector">
     {teams.map((team) => {
       const { id, ...rest } = team
       return <TeamLink team={team} key={id} {...rest} />
     })}
 
-    <div className="team-selector__add-team-button cursor-pointer p-4 inline-block sm:block">
-      <div className="bg-white opacity-25 h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
+    <div className="inline-block p-4 cursor-pointer team-selector__add-team-button sm:block">
+      <div className="flex items-center justify-center w-12 h-12 mb-1 overflow-hidden text-2xl font-semibold text-black bg-white rounded-lg opacity-25">
         <svg
           aria-hidden="true"
-          className="fill-current h-10 w-10 block"
+          className="block w-10 h-10 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
