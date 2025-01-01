@@ -15,8 +15,9 @@
     "rootDir": ".",
     // supersedes other type declarations; says look at the types declared in this folder first
     "paths": {
-      "*": ["types/*"]
-    }
+      "*": ["types/*"],
+      "chat-stdlib": ["../chat-stdlib/dist/chat-stdlib-beta.d.ts"]
+    },
     // "typeRoots": ["./types"],
   },
   "include": [
