@@ -12,7 +12,12 @@
     "allowImportingTsExtensions": true,
     // "noImplicitAny": true,
     "baseUrl": ".",
-    "rootDir": "."
+    "rootDir": ".",
+    // supersedes other type declarations; says look at the types declared in this folder first
+    "paths": {
+      "*": ["types/*"],
+      "chat-stdlib": ["../chat-stdlib/dist/chat-stdlib-beta.d.ts"]
+    },
     // "typeRoots": ["./types"],
   },
   "include": [

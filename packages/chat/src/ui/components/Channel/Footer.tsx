@@ -1,9 +1,11 @@
 import * as React from 'react'
+import { IChannel } from '../../../types'
 
-const Footer = ({ channel: { name: channelName } }) => (
-  <footer className="pb-6 px-4 flex-none channel-footer">
+const Footer: React.FC<{channel: Pick<IChannel, 'name'>}> =
+ ({ channel: { name: channelName } }) => (
+  <footer className="flex-none px-4 pb-6 channel-footer">
     <form
-      className="flex w-full rounded-lg border-2 border-gray overflow-hidden"
+      className="flex w-full overflow-hidden border-2 rounded-lg border-gray"
       aria-labelledby="message-label"
     >
       <p id="message-label" className="sr-only">
@@ -11,12 +13,12 @@ const Footer = ({ channel: { name: channelName } }) => (
       </p>
 
       <button
-        className="text-3xl text-gray border-r-2 border-gray p-2"
+        className="p-2 text-3xl border-r-2 text-gray border-gray"
         aria-label="add a file to this message"
       >
         <svg
           aria-hidden="true"
-          className="fill-current h-6 w-6 block"
+          className="block w-6 h-6 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
@@ -30,14 +32,14 @@ const Footer = ({ channel: { name: channelName } }) => (
 
       <input
         id="message-input"
-        className="channel-footer__message-input w-full px-4"
+        className="w-full px-4 channel-footer__message-input"
         placeholder={`Send a message to the #${channelName} channel`}
         type="text"
       />
 
       <button
         disabled
-        className="channel-footer__message-send-button font-bold uppercase opacity-50 bg-gray-600 text-white border-teal-600 p-2"
+        className="p-2 font-bold text-white uppercase bg-gray-600 border-teal-600 opacity-50 channel-footer__message-send-button"
       >
         SEND
       </button>
